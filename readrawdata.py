@@ -4,15 +4,13 @@ import string
 #This code is to process Neuroscan txt files and separate the data in these files into separate files for each trial and condition (click).
 #Inputs are the input directory for files from Neuroscan, desired output directory, and the group (patient/control) that is being processed.
 
-inputdir = '/Users/joannamialkowska/Documents/MATLAB/SCCN/auditory_project/rawdata/patient/'
-outputdir = '/Users/joannamialkowska/Documents/MATLAB/SCCN/auditory_project/txtfiles/patient/'
+inputdir = '' %Insert input file directory
+outputdir = '' %Insert output file directory
 group = 'patient' #or 'control'
-
 
 #Reads through txt file line by line in order to remove text rows, find trial number and type, and divide txt file 
 #into seperate files for each click and trial
 def converttxt(inputdir,outputdir,group,idnumber):
-
     file = open(inputdir + str(idnumber) + '.txt', 'r')
 
     #trial type = click
@@ -55,8 +53,6 @@ def converttxt(inputdir,outputdir,group,idnumber):
                     outputfile.close()
                     state = 0
                     continue
-                
-
 import os
 
 #Runs function to separate out the txt file for every file in folder
