@@ -11,22 +11,22 @@ outputFileName = baseFileName;
 EEG = pop_importdata('dataformat','ascii','nbchan',0,'data',fullFileName,'srate',samplingrate,'subject',idnumber,'pnts',0,'condition',trialtype,'xmin',0,'group',group,'session',trialnumber);
 [ALLEEG EEG CURRENTSET] = pop_newset(ALLEEG, EEG, 0,'setname',outputFileName,'gui','off'); 
 
-%import channel information
+%import channel information, different file + directories for the channel info files
 channelnumber = EEG.nbchan;
 if channelnumber == 81
-    channelfile = '/Users/joannamialkowska/Documents/MATLAB/SCCN/deepa_project/dipfit/channelnumber/Standard-10-20-Cap81.ced';
+    channelfile = '';
 elseif channelnumber == 62
-        channelfile = '/Users/joannamialkowska/Documents/MATLAB/SCCN/deepa_project/dipfit/channelnumber/Cap62ch_custom_2016_01_28_Control17.ced';
+        channelfile = '';
 elseif channelnumber == 61
-        channelfile = '/Users/joannamialkowska/Documents/MATLAB/SCCN/deepa_project/dipfit/channelnumber/Cap61ch_custom_2016_02_02_Control36.ced';
+        channelfile = '';
 elseif channelnumber == 60
-        channelfile = '/Users/joannamialkowska/Documents/MATLAB/SCCN/deepa_project/dipfit/channelnumber/Cap60ch_custom_2016_02_02_Control15.ced';
+        channelfile = '';
 elseif channelnumber == 59
-        channelfile = '/Users/joannamialkowska/Documents/MATLAB/SCCN/deepa_project/dipfit/channelnumber/Cap59ch_custom_2016_01_26_Patient1.ced.ced';
+        channelfile = '';
 elseif channelnumber == 58
-        channelfile = '/Users/joannamialkowska/Documents/MATLAB/SCCN/deepa_project/dipfit/channelnumber/Cap58ch_custom_2016_02_04_Control24.ced';
+        channelfile = '';
 elseif channelnumber == 57
-        channelfile = '/Users/joannamialkowska/Documents/MATLAB/SCCN/deepa_project/dipfit/channelnumber/Cap57ch_custom_2016_02_04_Control37.ced';
+        channelfile = '';
 else 
     printf('Unrecognized Channel Number')
 end
