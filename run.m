@@ -7,8 +7,8 @@
 %NOTE: in createset.m channel information files/file locations need to be
 %changed depending on user. Besides this, nothing else needs to be changed.
 
-inputDir = '/Users/joannamialkowska/Documents/MATLAB/SCCN/auditory_project/txtfiles';
-setDir = '/Users/joannamialkowska/Documents/MATLAB/SCCN/auditory_project/setfiles/';
+inputDir = ''; %Insert input directory
+setDir = ''; %Insert set directory
 samplingrate = 1000;
 
 importfile(inputDir,samplingrate,setDir)
